@@ -1,0 +1,204 @@
+{"frames": {
+
+"baldeagle.png":
+{
+	"frame": {"x":1171,"y":1283,"w":180,"h":285},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":285},
+	"sourceSize": {"w":180,"h":285}
+},
+"bite.png":
+{
+	"frame": {"x":409,"y":1699,"w":102,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":48},
+	"sourceSize": {"w":102,"h":48}
+},
+"brokentree.png":
+{
+	"frame": {"x":1,"y":1524,"w":291,"h":231},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":291,"h":231},
+	"sourceSize": {"w":291,"h":231}
+},
+"bush.png":
+{
+	"frame": {"x":976,"y":1004,"w":700,"h":276},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":700,"h":276},
+	"sourceSize": {"w":700,"h":276}
+},
+"cloud.png":
+{
+	"frame": {"x":1,"y":1004,"w":972,"h":241},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":972,"h":241},
+	"sourceSize": {"w":972,"h":241}
+},
+"crocodam.png":
+{
+	"frame": {"x":252,"y":1782,"w":256,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":94},
+	"sourceSize": {"w":256,"h":94}
+},
+"crocodile.png":
+{
+	"frame": {"x":1147,"y":1571,"w":180,"h":321},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":321},
+	"sourceSize": {"w":180,"h":321}
+},
+"crocodile2.png":
+{
+	"frame": {"x":1330,"y":1571,"w":180,"h":321},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":321},
+	"sourceSize": {"w":180,"h":321}
+},
+"decoration1.png":
+{
+	"frame": {"x":1,"y":1758,"w":248,"h":132},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":248,"h":132},
+	"sourceSize": {"w":248,"h":132}
+},
+"dragonfly.png":
+{
+	"frame": {"x":1,"y":1248,"w":444,"h":273},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":444,"h":273},
+	"sourceSize": {"w":444,"h":273}
+},
+"electriceel.png":
+{
+	"frame": {"x":1540,"y":1283,"w":102,"h":258},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":258},
+	"sourceSize": {"w":102,"h":258}
+},
+"frog.png":
+{
+	"frame": {"x":961,"y":1283,"w":207,"h":285},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":207,"h":285},
+	"sourceSize": {"w":207,"h":285}
+},
+"halfmangrove.png":
+{
+	"frame": {"x":448,"y":1248,"w":260,"h":448},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":448},
+	"sourceSize": {"w":260,"h":448}
+},
+"hippo.png":
+{
+	"frame": {"x":1354,"y":1283,"w":183,"h":264},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":264},
+	"sourceSize": {"w":183,"h":264}
+},
+"hippobite.png":
+{
+	"frame": {"x":894,"y":1571,"w":250,"h":172},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":250,"h":172},
+	"sourceSize": {"w":250,"h":172}
+},
+"island.png":
+{
+	"frame": {"x":894,"y":1248,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"lillypad.png":
+{
+	"frame": {"x":511,"y":1750,"w":624,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":624,"h":152},
+	"sourceSize": {"w":624,"h":152}
+},
+"manatee.png":
+{
+	"frame": {"x":711,"y":1248,"w":180,"h":348},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":348},
+	"sourceSize": {"w":180,"h":348}
+},
+"piranha.png":
+{
+	"frame": {"x":1645,"y":1364,"w":180,"h":264},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":264},
+	"sourceSize": {"w":180,"h":264}
+},
+"snake.png":
+{
+	"frame": {"x":295,"y":1524,"w":111,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":111,"h":255},
+	"sourceSize": {"w":111,"h":255}
+},
+"snappingturtle.png":
+{
+	"frame": {"x":1679,"y":1004,"w":180,"h":357},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":357},
+	"sourceSize": {"w":180,"h":357}
+},
+"tree.png":
+{
+	"frame": {"x":1,"y":1,"w":1860,"h":1000},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1860,"h":1000},
+	"sourceSize": {"w":1860,"h":1000}
+},
+"water.png":
+{
+	"frame": {"x":711,"y":1599,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"watercover.png":
+{
+	"frame": {"x":711,"y":1666,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "swamp.png",
+	"format": "RGBA8888",
+	"size": {"w":1862,"h":1903},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2ca5265e4353b699ef45e4f55312fbd1:9464734f7c0ec4e1fdb0a3ccae65ef79:5ec26a4328f959597726dab8821193dd$"
+}
+}
