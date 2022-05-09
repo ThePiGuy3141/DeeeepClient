@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="noselect">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Deeeep.io - Eat fish, become the shark!</title>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://deeeep.io/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://deeeep.io/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="style.css">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-6721920079174319" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <!--<link rel="stylesheet" type="text/css"  href="assets/style.css">-->
+  <!--<script src="http://192.168.0.69:8088/target/target-script-min.js#anonymous"></script>-->
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script async src='https://deeeep.io/cdn-cgi/challenge-platform/h/b/scripts/invisible.js?ts=1650927600'></script></head>
+<body>
+  <div id="joystick-area"></div>
+  <div id="app" :class="'gamemode-'+gamemode">
+    <template v-if="playing">
+      <div id="bottom-bar">
+        <chat :game-mode="gamemode" :current-tribe="currentTribe" v-if="chatDialogOpen"></chat>
+        <ovo-header v-if="roomInfo && roomInfo.gameMode == gameModes.oneVsOne" :room-info="roomInfo"></ovo-header>
+        <pd-header v-if="roomInfo && roomInfo.gameMode == gameModes.teamDm" :room-info="roomInfo"></pd-header>
+        <lms-header v-if="roomInfo && roomInfo.gameMode == gameModes.lastMan && roomInfo.status == 2" :room-info="roomInfo"></lms-header>
+        <stats
+          :stats="stats"
+          :xp-percentage="currentXpPercentage"
+          :current-level="currentLevel"
+          :fish-level="fishLevel"
+          :piranha-count="piranhaCount"
+          :piranha-percentage="piranhaPercentage"
+          :current-xp="currentXp"
+          :xp-left="currentXpLeft"></stats>
+      </div>
+      <tribes :current-tribe="currentTribe"
+              :current-tribe-role="currentTribeRole"
+              :player-id="playerId"
+              :nearby-tribes="nearbyTribes" v-if="showingTribeDialog && gamemode == gameModes.teamFfa"></tribes>
+      <choices :choices="choices" :minimized="choicesDialogMinimized" :current-area="currentArea" v-if="choices.length > 0"></choices>
+      <muted-players :muted-list="mutedList" v-if="showingMutedList"></muted-players>
+      <respawn-dialog :seconds-left="respawnSecondsLeft" v-if="showingRespawnDialog"></respawn-dialog>
+      <animal-info :animal-infos="animalInfos"></animal-info>
+      <area-kings :gamemode="gamemode" :ranking="ranking" v-if="(gamemode == gameModes.ffa || gamemode == gameModes.teamFfa) && !isMobile && ranking.ranking.length >= 1"></area-kings>
+      <kills :kills="killsData" v-show="killsData && killsData.length > 0"></kills>
+      <div id="top-right-menu" v-show="!rightMenuHidden">
+        <div>
+          <div class="button-container">
+            <div class="ui-button" href="#" v-if="isSpectating" v-hammer:tap="stopSpectating"><i class="material-icon">close</i></div>
+            <div class="ui-button" href="#" v-hammer:tap="toggleFullScreen" v-if="!isCordova"><i class="material-icon">fullscreen</i></div>
+            <div class="ui-button" href="#" v-hammer:tap="toggleSettingsDialog"><i class="material-icon">settings</i></div>
+            <div class="ui-button" href="#" v-hammer:tap="zoomOut"><i class="material-icon">zoom_out</i></div>
+            <div class="ui-button" href="#" v-hammer:tap="zoomIn"><i class="material-icon">zoom_in</i></div>
+            <div class="ui-button" href="#" v-hammer:tap="toggleTribeDialog" v-if="gamemode == gameModes.teamFfa">
+              <i class="material-icon">group</i>
+              <span class="hint" v-if="!isMobile">T</span>
+            </div>
+            <div class="ui-button" href="#" v-hammer:tap="toggleChatDialog" v-if="isMobile"><i class="material-icon">chat</i></div>
+          </div>
+          <tribe-requests :requests="tribeRequests" v-if="gamemode == gameModes.teamFfa"></tribe-requests>
+        </div>
+        <ranking :ranking="ranking" :gamemode="gamemode" v-if="ranking.ranking.length >= 1 && gamemode != gameModes.lastMan"></ranking>
+      </div>
+    </template>
+    <template v-if="!isMobile">
+      <div class="children-inline store-links desktop" v-show="showingMenu && userCountry != 'CN'">
+        <div id="play-store-container">
+          <a href="https://play.google.com/store/apps/details?id=com.ouwi.deeeep.two" target="_blank">
+            <img src="https://deeeep.io/playstorepromo.png?v=2">
+          </a>
+        </div>
+      </div>
+    </template>
+    <skins :animal-tiers="animalTiers" :user-data="userData" v-if="showingStoreDialog"></skins>
+    <play-history :play-history="playHistory" v-if="showingPlayHistory && gamemode != gameModes.lastMan"></play-history>
+    <lms-play-history :play-history="playHistory" v-else-if="showingPlayHistory && gamemode == gameModes.lastMan"></lms-play-history>
+    <finished-room-ovo v-if="gamemode == gameModes.oneVsOne && roomInfo && showingFinishedRoom"
+                   :gamemode="gamemode" :room-info="roomInfo" :messages="roomMessages"></finished-room-ovo>
+    <finished-room-pd v-if="gamemode == gameModes.teamDm && roomInfo && showingFinishedRoom"
+                   :gamemode="gamemode" :room-info="roomInfo" :messages="roomMessages"></finished-room-pd>
+    <finished-room-lms v-if="gamemode == gameModes.lastMan && roomInfo && showingFinishedRoom"
+                   :gamemode="gamemode" :room-info="roomInfo" :messages="roomMessages" :ranking="ranking"></finished-room-lms>
+    <loading-room v-if="roomInfo && showingLoadingRoom" :room-info="roomInfo" :messages="roomMessages" :gamemode="gamemode"></loading-room>
+    <server-messages :messages="serverMessages"></server-messages>
+    <fps-display :fps-data="fpsData" :chat-muted="chatMuted"></fps-display>
+    <settings :renderer-options="rendererOptions" v-if="showingSettingsDialog"></settings>
+    <k-dialog :k-data="kData" v-if="showingCDialog"></k-dialog>
+    <home
+            v-show="showingMenu"
+            :user-country="userCountry"
+            :showing-menu="showingMenu"
+            :login-methods="loginMethods"
+            :user-data="userData"
+            :selected-server-info="selectedServerInfo"
+            :selected-server="selectedServer"
+            :gamemode="gamemode"
+            :connected="connected"
+            :is-test="test"
+            :map-loaded="mapLoaded"
+            :match-settings="matchSettings"
+            :connecting="connecting"
+            :available-gamemodes="availableGameModes"></home>
+    <new-items :new-items="newItems" v-if="newItems.length > 0"></new-items>
+    <set-password v-on:close="showingSetPassword = false" v-if="showingSetPassword" :user="userData"></set-password>
+    <message-dialog v-for="message of messages" :title="message.title" :content="message.content"
+      v-on:close="message.close"></message-dialog>
+    <dialogs-wrapper wrapper-name="default"></dialogs-wrapper>
+  </div>
+  <div id="adContainer" style="
+      position: absolute;
+      display: none;
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(53, 53, 53, 0.62);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;"></div>
+  <div id="canvas-container"></div>
+  <script src="https://deeeep.io/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://crowdl.io/assets/api/crowdl.min.js"></script>
+  <script type="text/javascript">
+    if(typeof crowdl !== "undefined"){
+      window.crowdl = crowdl;
+    }
+  </script>
+  <script src="https://deeeepio-client.glitch.me/bundle.js"></script>
+  <style lang="scss">
+    @import 'https://deeeep.io/assets/socicon.css?v=35';
+    @import 'https://deeeepio-client.glitch.me/style.css';
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73137708-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-73137708-10');
+  </script>
+  <!--<script type="text/javascript">
+    window._urq = window._urq || [];
+    _urq.push(['initSite', 'f8019897-8b60-44bd-9fa4-a62c27d4fd2f']);
+    (function() {
+      var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
+      ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
+    })();
+  </script>-->
+  <script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'701adba5caa98408',m:'i3jSYYgamCAUxN.t7HT7VRjNPrYcUN6WEMc.GFb00ww-1650929337-0-AfvdhVkzG1tyKGnWCj2Rdqyr/d1NlVpjU2UeW6ca6bOtpk3m//x/LsoPbxeztXG97wGsEJ96qUUQ6x6a5PpUA2jwNSyKmRwahBvklTE5SrkHOjjeTKhgxbpjeqEjcWNx9A==',s:[0x197c4f7690,0xda21e7c1b0],u:'/cdn-cgi/challenge-platform/h/b'}})();</script></body>
+</html>
