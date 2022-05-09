@@ -3,7 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Deeeep.io - Eat fish, become the shark!</title>
+  <title>Hacked Deeeep.io - Eat fish and hack the shark!</title>
+  <meta content="Hacked Deeeep.io - Eat fish and hack the shark!" property="og:title" />
+  <meta
+    content="Just a hacked deeeep.io client ¯\_(ツ)_/¯"
+    property="og:description"
+  />
+  <meta content="https://deeeep.glitch.me" property="og:url" />
+  <meta property="og:site_name" content="It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸" />
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://deeeep.io/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="https://deeeep.io/favicon-16x16.png" sizes="16x16">
@@ -63,15 +70,22 @@
         <ranking :ranking="ranking" :gamemode="gamemode" v-if="ranking.ranking.length >= 1 && gamemode != gameModes.lastMan"></ranking>
       </div>
     </template>
-    <template v-if="!isMobile">
+    <!--<template v-if="!isMobile">-->
       <div class="children-inline store-links desktop" v-show="showingMenu && userCountry != 'CN'">
-        <div id="play-store-container">
+        <!--<div id="play-store-container">
           <a href="https://play.google.com/store/apps/details?id=com.ouwi.deeeep.two" target="_blank">
             <img src="https://deeeep.io/playstorepromo.png?v=2">
           </a>
-        </div>
+        </div>-->
+        <p>
+          Hacked client made by It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸
+        </p>
+        <br>
+        <p>
+          Original game by Federico Mouse
+        </p>
       </div>
-    </template>
+    <!--</template>-->
     <skins :animal-tiers="animalTiers" :user-data="userData" v-if="showingStoreDialog"></skins>
     <play-history :play-history="playHistory" v-if="showingPlayHistory && gamemode != gameModes.lastMan"></play-history>
     <lms-play-history :play-history="playHistory" v-else-if="showingPlayHistory && gamemode == gameModes.lastMan"></lms-play-history>
@@ -125,10 +139,10 @@
       window.crowdl = crowdl;
     }
   </script>
-  <script src="https://deeeepio-client.glitch.me/bundle.js"></script>
+  <script src="https://deeeep.glitch.me/bundle.js"></script>
   <style lang="scss">
     @import 'https://deeeep.io/assets/socicon.css?v=35';
-    @import 'https://deeeepio-client.glitch.me/style.css';
+    @import 'https://deeeep.glitch.me/style.css';
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73137708-10"></script>
