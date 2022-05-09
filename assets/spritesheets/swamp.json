@@ -1,0 +1,189 @@
+{
+  "frames": {
+    "baldeagle.png": {
+      "frame": { "x": 394, "y": 1199, "w": 180, "h": 285 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 180, "h": 285 },
+      "sourceSize": { "w": 180, "h": 285 }
+    },
+    "bite.png": {
+      "frame": { "x": 894, "y": 1267, "w": 102, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 102, "h": 48 },
+      "sourceSize": { "w": 102, "h": 48 }
+    },
+    "swamp_brokentree.png": {
+      "frame": { "x": 804, "y": 1600, "w": 194, "h": 154 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 194, "h": 154 },
+      "sourceSize": { "w": 194, "h": 154 }
+    },
+    "swamp_bush.png": {
+      "frame": { "x": 577, "y": 1459, "w": 350, "h": 138 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 350, "h": 138 },
+      "sourceSize": { "w": 350, "h": 138 }
+    },
+    "cloud.png": {
+      "frame": { "x": 1, "y": 504, "w": 972, "h": 241 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 972, "h": 241 },
+      "sourceSize": { "w": 972, "h": 241 }
+    },
+    "swamp_crocodam.png": {
+      "frame": { "x": 254, "y": 1754, "w": 256, "h": 94 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 94 },
+      "sourceSize": { "w": 256, "h": 94 }
+    },
+    "crocodile.png": {
+      "frame": { "x": 211, "y": 1024, "w": 180, "h": 321 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 180, "h": 321 },
+      "sourceSize": { "w": 180, "h": 321 }
+    },
+    "crocodile2.png": {
+      "frame": { "x": 1, "y": 1312, "w": 180, "h": 321 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 180, "h": 321 },
+      "sourceSize": { "w": 180, "h": 321 }
+    },
+    "swamp_decoration1.png": {
+      "frame": { "x": 553, "y": 1600, "w": 248, "h": 132 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 248, "h": 132 },
+      "sourceSize": { "w": 248, "h": 132 }
+    },
+    "dragonfly.png": {
+      "frame": { "x": 1, "y": 748, "w": 444, "h": 273 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 444, "h": 273 },
+      "sourceSize": { "w": 444, "h": 273 }
+    },
+    "electriceel.png": {
+      "frame": { "x": 894, "y": 1006, "w": 102, "h": 258 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 102, "h": 258 },
+      "sourceSize": { "w": 102, "h": 258 }
+    },
+    "frog.png": {
+      "frame": { "x": 1, "y": 1024, "w": 207, "h": 285 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 207, "h": 285 },
+      "sourceSize": { "w": 207, "h": 285 }
+    },
+    "swamp_halfmangrove.png": {
+      "frame": { "x": 448, "y": 748, "w": 260, "h": 448 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 448 },
+      "sourceSize": { "w": 260, "h": 448 }
+    },
+    "hippo.png": {
+      "frame": { "x": 184, "y": 1348, "w": 183, "h": 264 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 183, "h": 264 },
+      "sourceSize": { "w": 183, "h": 264 }
+    },
+    "hippobite.png": {
+      "frame": { "x": 1, "y": 1636, "w": 250, "h": 172 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 250, "h": 172 },
+      "sourceSize": { "w": 250, "h": 172 }
+    },
+    "island.png": {
+      "frame": { "x": 934, "y": 1, "w": 64, "h": 64 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+      "sourceSize": { "w": 64, "h": 64 }
+    },
+    "swamp_lillypadabove.png": {
+      "frame": { "x": 513, "y": 1814, "w": 312, "h": 22 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 312, "h": 22 },
+      "sourceSize": { "w": 312, "h": 22 }
+    },
+    "swamp_lillypadbelow.png": {
+      "frame": { "x": 513, "y": 1757, "w": 312, "h": 54 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 312, "h": 54 },
+      "sourceSize": { "w": 312, "h": 54 }
+    },
+    "manatee.png": {
+      "frame": { "x": 711, "y": 1108, "w": 180, "h": 348 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 180, "h": 348 },
+      "sourceSize": { "w": 180, "h": 348 }
+    },
+    "piranha.png": {
+      "frame": { "x": 370, "y": 1487, "w": 180, "h": 264 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 180, "h": 264 },
+      "sourceSize": { "w": 180, "h": 264 }
+    },
+    "snake.png": {
+      "frame": { "x": 894, "y": 748, "w": 111, "h": 255 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 111, "h": 255 },
+      "sourceSize": { "w": 111, "h": 255 }
+    },
+    "snappingturtle.png": {
+      "frame": { "x": 711, "y": 748, "w": 180, "h": 357 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 180, "h": 357 },
+      "sourceSize": { "w": 180, "h": 357 }
+    },
+    "swamp_tree.png": {
+      "frame": { "x": 1, "y": 1, "w": 930, "h": 500 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 930, "h": 500 },
+      "sourceSize": { "w": 930, "h": 500 }
+    },
+    "water.png": {
+      "frame": { "x": 934, "y": 68, "w": 64, "h": 64 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+      "sourceSize": { "w": 64, "h": 64 }
+    },
+    "watercover.png": {
+      "frame": { "x": 934, "y": 135, "w": 64, "h": 64 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
+      "sourceSize": { "w": 64, "h": 64 }
+    }
+  },
+  "meta": {
+    "app": "http://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "swamp.png",
+    "format": "RGBA8888",
+    "size": { "w": 1006, "h": 1849 },
+    "scale": "1",
+    "smartupdate":
+      "$TexturePacker:SmartUpdate:7c6875ef9fe2f2b10c30c87903598bf5:3c801fab304142ea8ab99c1c4169a0ea:5ec26a4328f959597726dab8821193dd$"
+  }
+}

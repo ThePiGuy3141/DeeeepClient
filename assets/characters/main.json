@@ -1,0 +1,116 @@
+{"frames": {
+
+"beaver.png":
+{
+	"frame": {"x":1,"y":1,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"crab.png":
+{
+	"frame": {"x":1,"y":258,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"dolphin.png":
+{
+	"frame": {"x":1,"y":515,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"fish.png":
+{
+	"frame": {"x":183,"y":1,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"jellyfish.png":
+{
+	"frame": {"x":365,"y":1,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"killerwhale.png":
+{
+	"frame": {"x":547,"y":1,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"penguin.png":
+{
+	"frame": {"x":729,"y":1,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"ray.png":
+{
+	"frame": {"x":183,"y":258,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"seagull.png":
+{
+	"frame": {"x":183,"y":515,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"shark.png":
+{
+	"frame": {"x":365,"y":258,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"squid.png":
+{
+	"frame": {"x":365,"y":515,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"tshark.png":
+{
+	"frame": {"x":547,"y":258,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+},
+"whale.png":
+{
+	"frame": {"x":729,"y":258,"w":180,"h":255},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":255},
+	"sourceSize": {"w":180,"h":255}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "main.png",
+	"format": "RGBA8888",
+	"size": {"w":910,"h":910},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:b54eb849fb6cef0870cfe4fc3aa5c995:2ebfe57532f536f42a8ababac4acf3c7:03f91ab73e0f4667800419161e658c40$"
+}
+}
