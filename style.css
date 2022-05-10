@@ -2891,6 +2891,22 @@ span.amount {margin: 4.5px;}
     color: #fff;
 }
 
+#fb-login {
+  display: none;
+}
+
+#gplus-login {
+  display: none;
+}
+
+#vk-login {
+  display: none;
+}
+
+#twitter-login {
+  display: none;
+}
+
 #death-dialog-preview {
     clear: both;
 }

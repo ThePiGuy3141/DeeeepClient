@@ -70,22 +70,15 @@
         <ranking :ranking="ranking" :gamemode="gamemode" v-if="ranking.ranking.length >= 1 && gamemode != gameModes.lastMan"></ranking>
       </div>
     </template>
-    <!--<template v-if="!isMobile">-->
+    <template v-if="!isMobile">
       <div class="children-inline store-links desktop" v-show="showingMenu && userCountry != 'CN'">
-        <!--<div id="play-store-container">
+        <div id="play-store-container">
           <a href="https://play.google.com/store/apps/details?id=com.ouwi.deeeep.two" target="_blank">
             <img src="https://deeeep.io/playstorepromo.png?v=2">
           </a>
-        </div>-->
-        <p>
-          Hacked client made by It*s ⫷Ꮆяᗩиᕲ💠ᑭî⫸
-        </p>
-        <br>
-        <p>
-          Original game by Federico Mouse
-        </p>
+        </div>
       </div>
-    <!--</template>-->
+    </template>
     <skins :animal-tiers="animalTiers" :user-data="userData" v-if="showingStoreDialog"></skins>
     <play-history :play-history="playHistory" v-if="showingPlayHistory && gamemode != gameModes.lastMan"></play-history>
     <lms-play-history :play-history="playHistory" v-else-if="showingPlayHistory && gamemode == gameModes.lastMan"></lms-play-history>
@@ -139,10 +132,10 @@
       window.crowdl = crowdl;
     }
   </script>
-  <script src="https://deeeep.glitch.me/bundle.js"></script>
+  <script src="bundle.js"></script>
   <style lang="scss">
     @import 'https://deeeep.io/assets/socicon.css?v=35';
-    @import 'https://deeeep.glitch.me/style.css';
+    @import 'style.css';
   </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73137708-10"></script>
