@@ -1,4 +1,8 @@
 /*! For license information please see bundle.js.LICENSE.txt */
+function togglePlay() {
+        var myAudio = document.getElementById("myAudio");
+        return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
 !(function (t) {
   var e = {};
   function n(i) {
@@ -35958,19 +35962,19 @@
             antialias: !0,
           }),
           (this.resolutionSliderOptions = {
-            height: 8,
-            dotSize: 20,
-            min: 0.5,
-            max: 2,
-            interval: 0.1,
-            disabled: !1,
-            show: !0,
-            speed: 0.3,
-            reverse: !1,
-            lazy: !0,
-            tooltip: "hover",
-            piecewise: !0,
-          });
+              height: 8,
+              dotSize: 20,
+              min: 0.05,
+              max: 4,
+              interval: 0.01,
+              disabled: !1,
+              show: !0,
+              speed: 0.3,
+              reverse: !1,
+              lazy: !0,
+              tooltip: "hover",
+              piecewise: !0,
+            });
       }
       mounted() {
         (this.defaultOptions.resolution = Math.min(2, window.devicePixelRatio)),
@@ -44804,27 +44808,70 @@
                 ]),
                 t._v(" "),
                 n(
-                  "div",
-                  { staticClass: "col-sm-8" },
-                  [
-                    n("b-form-checkbox", {
-                      attrs: { id: "mute" },
-                      on: { change: t.muteChanged },
-                      model: {
-                        value: t.mute,
-                        callback: function (e) {
-                          t.mute = e;
+                    "div",
+                    { staticClass: "col-sm-8" },
+                    [
+                      n("b-form-checkbox", {
+                        attrs: { id: "mute" },
+                        on: { change: t.muteChanged },
+                        model: {
+                          value: t.mute,
+                          callback: function (e) {
+                            t.mute = e;
+                          },
+                          expression: "mute",
                         },
-                        expression: "mute",
+                      }),
+                    ],
+                    1
+                  ),
+                ]),
+                n("div", { staticClass: "row" }, [
+                  n("div", { staticClass: "col-sm-4" }, [
+                    n(
+                      "label",
+                      {
+                        staticStyle: { "margin-bottom": "0" },
+                        attrs: { for: "webgl" },
                       },
-                    }),
-                  ],
-                  1
-                ),
+                      [t._v("Music")]
+                    ),
+                    t._v(" "),
+                    n("div", { staticClass: "field-info" }, [
+                      t._v("Background music"),
+                    ]),
+                  ]),
+                  t._v(" "),
+                  n(
+                    "div",
+                    { staticClass: "col-sm-8" },
+                    [
+                    n(
+                        "div",
+                        { class: "custom-control custom-checkbox custom-control-inline" },
+                        [
+                          n("input", {
+                            attrs: { id: "music", type: "checkbox", class: "custom-control-input" },
+                            // on: { change: togglePlay() },
+                            // model: {
+                            //   value: t.mute,
+                            //   callback: function (e) {
+                            //     t.mute = e;
+                            //   },
+                            //   expression: "mute",
+                            // },
+                          }),
+                          n("label", {
+                            attrs: { for: "music", class: "custom-control-label", onclick: "togglePlay()" },
+                          }),
+                      ]
+                    )],
+                    1
+                  ),
+                ]),
               ]),
-            ]),
-            t._v(" "),
-            n("div", { staticClass: "actions" }, [
+              t._v(" "),
+              n("div", { staticClass: "actions" }, [
               n(
                 "button",
                 {
