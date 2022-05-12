@@ -1,4 +1,8 @@
 /*! For license information please see bundle.js.LICENSE.txt */
+function togglePlay() {
+        var myAudio = document.getElementById("myAudio");
+        return myAudio.paused ? myAudio.play() : myAudio.pause();
+    };
 !(function (t) {
     var e = {};
     function n(i) {
@@ -11314,14 +11318,15 @@
           showName() {
             let t = this.fishLevelData.fishLevel;
             return (
-              t != o.default.fishLevel.lionmanejellyfish &&
-              t != o.default.fishLevel.dragonfly &&
-              t != o.default.fishLevel.firefly &&
-              t != o.default.fishLevel.pollock &&
-              t != o.default.fishLevel.sardine &&
-              t != o.default.fishLevel.babypenguin &&
-              t != o.default.fishLevel.remora &&
-              t != o.default.fishLevel.lanternfish
+            //   t != o.default.fishLevel.lionmanejellyfish &&
+            //   t != o.default.fishLevel.dragonfly &&
+            //   t != o.default.fishLevel.firefly &&
+            //   t != o.default.fishLevel.pollock &&
+            //   t != o.default.fishLevel.sardine &&
+            //   t != o.default.fishLevel.babypenguin &&
+            //   t != o.default.fishLevel.remora &&
+            //   t != o.default.fishLevel.lanternfish
+                true
             );
           }
           initSettings() {
@@ -12124,7 +12129,7 @@
             if (t)
               return (
                 t.fishLevelData.fishLevel == o.default.fishLevel.mantaray
-                  ? ((this.inner.alpha = 0.5), (this.relatedObjects.visible = !1))
+                  ? ((this.inner.alpha = 0.5), (this.relatedObjects.visible = !0))
                   : ((this.relatedObjects.visible = !0), (this.inner.alpha = 1)),
                 this.inner.alpha
               );
@@ -35960,9 +35965,9 @@
             (this.resolutionSliderOptions = {
               height: 8,
               dotSize: 20,
-              min: 0.5,
-              max: 2,
-              interval: 0.1,
+              min: 0.05,
+              max: 4,
+              interval: 0.01,
               disabled: !1,
               show: !0,
               speed: 0.3,
@@ -36417,32 +36422,32 @@
           this.canContinue = t;
         }
         sendMessage(t = null) {
-          if (this.muted) {
-            if (Date.now() - this.mutedTime < 3e3) return;
-            this.muted = !1;
-          }
-          if (this.messagesLast3S >= 3)
-            return (
-              (this.muted = !0),
-              (this.mutedTime = Date.now()),
-              void a.default.gameInterface.vueData.roomMessages.push({
-                senderId: 0,
-                senderName: "SYSTEM",
-                message: "Please, don't spam the room",
-              })
-            );
-          "" != (null != t ? t.trim() : this.message.trim()) &&
-            (a.default.gameInterface.game.socketManager.sendStringPacket(
-              u.default.build(this.message, !0)
-            ),
-            null == t && (this.message = ""),
-            this.messagesLast3S++,
-            setTimeout(
-              function () {
-                this.messagesLast3S--;
-              }.bind(this),
-              3e3
-            ));
+        //   if (this.muted) {
+        //     if (Date.now() - this.mutedTime < 3e3) return;
+        //     this.muted = !1;
+        //   }
+        //   if (this.messagesLast3S >= 3)
+        //     return (
+        //       (this.muted = !0),
+        //       (this.mutedTime = Date.now()),
+        //       void a.default.gameInterface.vueData.roomMessages.push({
+        //         senderId: 0,
+        //         senderName: "SYSTEM",
+        //         message: "Please, don't spam the room",
+        //       })
+        //     );
+        //   "" != (null != t ? t.trim() : this.message.trim()) &&
+        //     (a.default.gameInterface.game.socketManager.sendStringPacket(
+        //       u.default.build(this.message, !0)
+        //     ),
+        //     null == t && (this.message = ""),
+        //     this.messagesLast3S++,
+        //     setTimeout(
+        //       function () {
+        //         this.messagesLast3S--;
+        //       }.bind(this),
+        //       3e3
+        //     ));
         }
         keepPlaying() {
           a.default.gameInterface.game.restart(!1, !0),
@@ -36733,32 +36738,32 @@
           });
         }
         sendMessage(t = null) {
-          if (this.muted) {
-            if (Date.now() - this.mutedTime < 3e3) return;
-            this.muted = !1;
-          }
-          if (this.messagesLast3S >= 3)
-            return (
-              (this.muted = !0),
-              (this.mutedTime = Date.now()),
-              void a.default.gameInterface.vueData.roomMessages.push({
-                senderId: 0,
-                senderName: "SYSTEM",
-                message: "Please, don't spam the room",
-              })
-            );
-          "" != (null != t ? t.trim() : this.message.trim()) &&
-            (a.default.gameInterface.game.socketManager.sendStringPacket(
-              u.default.build(this.message, !0)
-            ),
-            null == t && (this.message = ""),
-            this.messagesLast3S++,
-            setTimeout(
-              function () {
-                this.messagesLast3S--;
-              }.bind(this),
-              3e3
-            ));
+        //   if (this.muted) {
+        //     if (Date.now() - this.mutedTime < 3e3) return;
+        //     this.muted = !1;
+        //   }
+        //   if (this.messagesLast3S >= 3)
+        //     return (
+        //       (this.muted = !0),
+        //       (this.mutedTime = Date.now()),
+        //       void a.default.gameInterface.vueData.roomMessages.push({
+        //         senderId: 0,
+        //         senderName: "SYSTEM",
+        //         message: "Please, don't spam the room",
+        //       })
+        //     );
+        //   "" != (null != t ? t.trim() : this.message.trim()) &&
+        //     (a.default.gameInterface.game.socketManager.sendStringPacket(
+        //       u.default.build(this.message, !0)
+        //     ),
+        //     null == t && (this.message = ""),
+        //     this.messagesLast3S++,
+        //     setTimeout(
+        //       function () {
+        //         this.messagesLast3S--;
+        //       }.bind(this),
+        //       3e3
+        //     ));
         }
         keepPlaying() {
           a.default.gameInterface.game.restart(!1, !1),
@@ -36933,32 +36938,32 @@
               );
         }
         sendMessage(t = null) {
-          if (this.muted) {
-            if (Date.now() - this.mutedTime < 3e3) return;
-            this.muted = !1;
-          }
-          if (this.messagesLast3S >= 3)
-            return (
-              (this.muted = !0),
-              (this.mutedTime = Date.now()),
-              void o.default.gameInterface.vueData.roomMessages.push({
-                senderId: 0,
-                senderName: "SYSTEM",
-                message: "Please, don't spam the room",
-              })
-            );
-          "" != (null != t ? t.trim() : this.message.trim()) &&
-            (o.default.gameInterface.game.socketManager.sendStringPacket(
-              l.default.build(this.message, !0)
-            ),
-            null == t && (this.message = ""),
-            this.messagesLast3S++,
-            setTimeout(
-              function () {
-                this.messagesLast3S--;
-              }.bind(this),
-              3e3
-            ));
+        //   if (this.muted) {
+        //     if (Date.now() - this.mutedTime < 3e3) return;
+        //     this.muted = !1;
+        //   }
+        //   if (this.messagesLast3S >= 3)
+        //     return (
+        //       (this.muted = !0),
+        //       (this.mutedTime = Date.now()),
+        //       void o.default.gameInterface.vueData.roomMessages.push({
+        //         senderId: 0,
+        //         senderName: "SYSTEM",
+        //         message: "Please, don't spam the room",
+        //       })
+        //     );
+        //   "" != (null != t ? t.trim() : this.message.trim()) &&
+        //     (o.default.gameInterface.game.socketManager.sendStringPacket(
+        //       l.default.build(this.message, !0)
+        //     ),
+        //     null == t && (this.message = ""),
+        //     this.messagesLast3S++,
+        //     setTimeout(
+        //       function () {
+        //         this.messagesLast3S--;
+        //       }.bind(this),
+        //       3e3
+        //     ));
         }
         keepPlaying() {
           o.default.gameInterface.game.restart(
@@ -37475,32 +37480,32 @@
           e && !t && this.updateWinner();
         }
         sendMessage(t = null) {
-          if (this.muted) {
-            if (Date.now() - this.mutedTime < 3e3) return;
-            this.muted = !1;
-          }
-          if (this.messagesLast3S >= 3)
-            return (
-              (this.muted = !0),
-              (this.mutedTime = Date.now()),
-              void o.default.gameInterface.vueData.roomMessages.push({
-                senderId: 0,
-                senderName: "SYSTEM",
-                message: "Please, don't spam the room",
-              })
-            );
-          "" != (null != t ? t.trim() : this.message.trim()) &&
-            (o.default.gameInterface.game.socketManager.sendStringPacket(
-              c.default.build(this.message, !0)
-            ),
-            null == t && (this.message = ""),
-            this.messagesLast3S++,
-            setTimeout(
-              function () {
-                this.messagesLast3S--;
-              }.bind(this),
-              3e3
-            ));
+        //   if (this.muted) {
+        //     if (Date.now() - this.mutedTime < 3e3) return;
+        //     this.muted = !1;
+        //   }
+        //   if (this.messagesLast3S >= 3)
+        //     return (
+        //       (this.muted = !0),
+        //       (this.mutedTime = Date.now()),
+        //       void o.default.gameInterface.vueData.roomMessages.push({
+        //         senderId: 0,
+        //         senderName: "SYSTEM",
+        //         message: "Please, don't spam the room",
+        //       })
+        //     );
+        //   "" != (null != t ? t.trim() : this.message.trim()) &&
+        //     (o.default.gameInterface.game.socketManager.sendStringPacket(
+        //       c.default.build(this.message, !0)
+        //     ),
+        //     null == t && (this.message = ""),
+        //     this.messagesLast3S++,
+        //     setTimeout(
+        //       function () {
+        //         this.messagesLast3S--;
+        //       }.bind(this),
+        //       3e3
+        //     ));
         }
         keepPlaying() {
           o.default.gameInterface.game.restart(!1, !1),
@@ -44819,6 +44824,49 @@
                         },
                       }),
                     ],
+                    1
+                  ),
+                ]),
+                n("div", { staticClass: "row" }, [
+                  n("div", { staticClass: "col-sm-4" }, [
+                    n(
+                      "label",
+                      {
+                        staticStyle: { "margin-bottom": "0" },
+                        attrs: { for: "webgl" },
+                      },
+                      [t._v("Music")]
+                    ),
+                    t._v(" "),
+                    n("div", { staticClass: "field-info" }, [
+                      t._v("Background music"),
+                    ]),
+                  ]),
+                  t._v(" "),
+                  n(
+                    "div",
+                    { staticClass: "col-sm-8" },
+                    [
+                    n(
+                        "div",
+                        { class: "custom-control custom-checkbox custom-control-inline" },
+                        [
+                          n("input", {
+                            attrs: { id: "music", type: "checkbox", class: "custom-control-input" },
+                            // on: { change: togglePlay() },
+                            // model: {
+                            //   value: t.mute,
+                            //   callback: function (e) {
+                            //     t.mute = e;
+                            //   },
+                            //   expression: "mute",
+                            // },
+                          }),
+                          n("label", {
+                            attrs: { for: "music", class: "custom-control-label", onclick: "togglePlay()" },
+                          }),
+                      ]
+                    )],
                     1
                   ),
                 ]),
