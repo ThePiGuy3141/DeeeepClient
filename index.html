@@ -156,4 +156,17 @@
   </script>-->
   <script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
 <script type="text/javascript">(function(){window['__CF$cv$params']={r:'701adba5caa98408',m:'i3jSYYgamCAUxN.t7HT7VRjNPrYcUN6WEMc.GFb00ww-1650929337-0-AfvdhVkzG1tyKGnWCj2Rdqyr/d1NlVpjU2UeW6ca6bOtpk3m//x/LsoPbxeztXG97wGsEJ96qUUQ6x6a5PpUA2jwNSyKmRwahBvklTE5SrkHOjjeTKhgxbpjeqEjcWNx9A==',s:[0x197c4f7690,0xda21e7c1b0],u:'/cdn-cgi/challenge-platform/h/b'}})();</script></body>
+<audio 
+id="myAudio" src="Deeeepio_theme_song.mp3" preload="auto">
+</audio>
+<script type="text/javascript">
+    $('#music').on('change', function() {
+      var myAudio = document.getElementById("myAudio");
+      if ($('#music').is(":checked")) {
+        myAudio.play();
+      } else if ($('#music').is(":not(:checked)")) {
+        myAudio.pause();
+      }
+    });
+</script>
 </html>
