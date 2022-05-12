@@ -21,6 +21,12 @@
   <!--<link rel="stylesheet" type="text/css"  href="assets/style.css">-->
   <!--<script src="http://192.168.0.69:8088/target/target-script-min.js#anonymous"></script>-->
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script type="text/javascript">
+    function togglePlay() {
+        var myAudio = document.getElementById("myAudio");
+        return myAudio.paused ? myAudio.play() : myAudio.pause();
+    };
+</script>
 <script async src='https://deeeep.io/cdn-cgi/challenge-platform/h/b/scripts/invisible.js?ts=1650927600'></script></head>
 <body>
   <div id="joystick-area"></div>
@@ -159,14 +165,4 @@
 <audio 
 id="myAudio" src="Deeeepio_theme_song.mp3" preload="auto">
 </audio>
-<script type="text/javascript">
-    $('#music').on('change', function() {
-      var myAudio = document.getElementById("myAudio");
-      if ($('#music').is(":checked")) {
-        myAudio.play();
-      } else if ($('#music').is(":not(:checked)")) {
-        myAudio.pause();
-      }
-    });
-</script>
 </html>
